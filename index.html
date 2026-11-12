@@ -28,3 +28,5 @@
 <script>
 const langBtn=document.getElementById('lang');let language='uk';function setLanguage(next){language=next;document.documentElement.lang=next;document.querySelectorAll('[data-uk]').forEach(el=>{const value=el.getAttribute('data-'+next);if(value!==null)el.innerHTML=value});langBtn.textContent=next==='uk'?'EN':'UA'}langBtn.addEventListener('click',()=>setLanguage(language==='uk'?'en':'uk'));document.getElementById('menu').addEventListener('click',()=>document.getElementById('navlinks').classList.toggle('open'));document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>document.getElementById('navlinks').classList.remove('open')));document.getElementById('year').textContent=new Date().getFullYear();const observer=new IntersectionObserver(entries=>entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('visible');observer.unobserve(entry.target)}}),{threshold:.12});document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
 </script></body></html>
+<script data-goatcounter="https://kseniavovk.goatcounter.com/count"
+        async src="//gc.zgo.at/count.js"></script>
